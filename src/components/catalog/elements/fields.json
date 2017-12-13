@@ -1,0 +1,99 @@
+{
+  "name": "Fields",
+  "api": "Fields",
+  "organization": true,
+  "editable": true,
+  "deletable": false,
+  "dependencies": [
+    "Brigades",
+    "FieldZones",
+    "FieldContours",
+    "Terrains",
+    "SoilTypes",
+    "Compositions"
+  ],
+  "attributes": [
+    {
+      "label": "Наименование",
+      "prop": "name"
+    },
+    {
+      "label": "Новое наименование",
+      "prop": "newName"
+    },
+    {
+      "label": "Кадастровый номер",
+      "prop": "kadastr",
+      "table": false
+    },
+    {
+      "label": "Бригада",
+      "prop": "Brigades.name",
+      "fkey": "brigadeId",
+      "filter": true,
+      "iterable": true
+    },
+    {
+      "label": "Площадь, га",
+      "prop": "area"
+    },
+    {
+      "label": "Расстояние до склада, км",
+      "prop": "distanceToGarage",
+      "table": false
+    },
+    {
+      "label": "Зона",
+      "prop": "FieldZones.name",
+      "fkey": "fieldZoneId",
+      "filter": true,
+      "iterable": true
+    },
+    {
+      "label": "Балл бонитет",
+      "prop": "bonitetScore"
+    },
+    {
+      "label": "Контур поля",
+      "prop": "FieldContours.name",
+      "fkey": "fieldContour",
+      "filter": true,
+      "iterable": true,
+      "table": false
+    },
+    {
+      "label": "Рельеф местности",
+      "prop": "Terrains.name",
+      "fkey": "terrain",
+      "filter": true,
+      "iterable": true,
+      "table": false
+    },
+    {
+      "label": "Тип почвы",
+      "prop": "SoilTypes.name",
+      "fkey": "soilType",
+      "filter": true,
+      "iterable": true,
+      "table": false
+    },
+    {
+      "label": "Пахотный слой",
+      "prop": "arableLayer",
+      "table": false
+    },
+    {
+      "label": "Гранолуметрический состав",
+      "prop": "Compositions.name",
+      "fkey": "composition",
+      "filter": true,
+      "iterable": true,
+      "table": false
+    },
+    {
+      "label": "Код ДЗЗ",
+      "prop": "geosysId",
+      "table": false
+    }
+  ]
+}
